@@ -14,10 +14,15 @@
 	</head>
 	<body>
 		<header>
-			<h1 class="title">Che piatto pugliese sei?</h1>
+			<h1 class="title">Qual'è il tuo piaitto guida?</h1>
 			<h3 class="sottotitolo">
-				Scopri con poche semplici domande qual è il tuo piatto guida. Inizia il test!
+				Scopri con poche semplici domande il tuo piatto guida. 
+				Inzia il test!
 			</h3>
+
+			<h3 class="sottotitolo">
+			    Inizia il test!
+		    </h3>
 		</header>
 
 		<form action="">
@@ -55,37 +60,45 @@
 				</div>
 			</div>
 
-			<button id="avanti">Avanti</button>
+			<button id="avanti">Incominciamo</button>
 		</form>
 
 		<div class="container">
-			<img
-				src=""
-				alt="" />
+			<img id="imgPlate" />
 			<h6 class="nomePlate"></h6>
+			<p class="underTitle"></p>
 			<p class="description"></p>
 		</div>
 
 		<script type="text/javascript">
-			let score = 50;
+			let score = 10;
 
 var piatti = [
 	{
-		nome: 'Popizze',
-		foto: 'https://www.pugliainesclusiva.it/puglia/wp-content/uploads/2016/08/popizze-fritte-3.jpg',
-		descrizione: 'Sei una popizza',
-		valore: '30',
+		nome: 'Carbnonara',
+		foto: 'https://media-assets.lacucinaitaliana.it/photos/642ab803d8bab3cfc524c28c/16:9/w_2560%2Cc_limit/GettyImages-111648900.jpg',
+		sottotitolo: 'Sei un buonisssimo piatto di Carbonara',
+		descrizione: `Una "Carbonara" è una persona che ha deciso di adottare uno stile di vita sostenibile e rispettoso dell'ambiente. Come il piatto italiano tradizionale, questa persona si impegna a ridurre l'impatto ambientale delle proprie azioni e a promuovere la conservazione delle risorse naturali. 
+
+		    La persona "Carbonara" fa scelte consapevoli per minimizzare l'utilizzo di combustibili fossili e la emissioni di gas serra. Opta per il trasporto pubblico, la bicicletta o l'auto elettrica, piuttosto che per l'auto privata alimentata a benzina o diesel. Inoltre, cerca di ridurre al minimo gli sprechi energetici a casa, scegliendo apparecchiature a basso consumo energetico e utilizzando fonti rinnovabili di energia solare.`,
+		   valore: '30',
 	},
 	{
-		nome: 'Pasticciotto',
-		foto: 'https://blog.giallozafferano.it/fablesucre/wp-content/uploads/2020/09/Blog_IMG_0390-scaled.jpg',
-		descrizione: 'Sei un pasticciotto',
+		nome: 'Pennette alla Vodka',
+		foto: 'https://blog.giallozafferano.it/ilchiccodimais/wp-content/uploads/2020/08/pennette-alla-vodka-e-pancetta-ricetta-primo-piatto-anni-ottanta-facile-veloce-e-cremoso-il-chicco-di-mais.jpg',
+		sottotitolo: 'Sei un una piato di Penette alla Vodka ',
+		descrizione: `Una persona che sceglie di essere una "Penetta alla vodka" è un individuo vivace, socievole e amante dei piaceri della vita. Ispirata dal piatto italiano "Penne alla vodka", questa persona ama gustare le gioie della cucina e si impegna a vivere una vita ricca di esperienze, divertimento e convivialità.
+
+		    La persona "Penetta alla vodka" è conosciuta per essere estroversa e amichevole. Ama circondarsi di amici e familiari e trascorrere del tempo in buona compagnia. È sempre pronta a organizzare cene, feste o riunioni sociali, dove si possono gustare prelibatezze culinarie e brindare al piacere di condividere momenti speciali.`,
 		valore: '50',
 	},
 	{
-		nome: 'Cartellata',
-		foto: 'https://staticcookist.akamaized.net/wp-content/uploads/sites/21/2022/06/Puccia-salentina-1200x675.jpg',
-		descrizione: 'Sei una cartellata',
+		nome: 'Spaghetti alla vongole',
+		foto: 'https://wallpapers.com/images/hd/spaghetti-alla-vongole-on-gray-bowl-n5cub12orzmh7lza.jpg',
+		sottotitolo: 'Sei un magnifico Spaghetto alle vongole',
+		descrizione: `Una persona che sceglie di essere uno "Spaghetto alle vongole" è un individuo che apprezza la semplicità, l'autenticità e la bellezza della vita. Ispirata dal famoso piatto italiano, questa persona abbraccia uno stile di vita che si basa sulla purezza, sulla connessione con la natura e sulla ricerca di equilibrio.
+
+		    La persona "Spaghetto alle vongole" ama la natura e trascorre molto tempo all'aperto. Apprezza la bellezza del mare, delle spiagge e della natura in generale. Trova pace e serenità nell'ascolto delle onde, nel contatto con la sabbia e nel profumo del mare. Questa persona è attratta dalla semplicità e dalla purezza della natura, cercando di proteggerla e di viverci in armonia.`,
 		valore: '70',
 	},
 ];
@@ -95,7 +108,7 @@ var questions = [
 		answers: [
 			{
 				answer: 'Perennemente in ritardo',
-				value: -5,
+				value: -10,
 			},
 			{
 				answer: 'Perfettamente in orario',
@@ -103,7 +116,7 @@ var questions = [
 			},
 			{
 				answer: 'Perennemente in anticipo',
-				value: 5,
+				value: 10,
 			},
 		],
 	},
@@ -112,15 +125,15 @@ var questions = [
 		answers: [
 			{
 				answer: 'Una birra fresca',
-				value: -5,
+				value: -10,
 			},
 			{
-				answer: 'Acqua, rigorosamente',
+				answer: 'Acqua, rigorosamente Frizzante',
 				value: 0,
 			},
 			{
-				answer: 'Un bicchiere di vino',
-				value: 5,
+				answer: 'cocktail',
+				value: 10,
 			},
 		],
 	},
@@ -129,7 +142,7 @@ var questions = [
 		answers: [
 			{
 				answer: 'Fritto',
-				value: -5,
+				value: -10,
 			},
 			{
 				answer: 'Dolce',
@@ -137,7 +150,7 @@ var questions = [
 			},
 			{
 				answer: 'Salato',
-				value: 5,
+				value: 10,
 			},
 		],
 	},
@@ -146,15 +159,15 @@ var questions = [
 		answers: [
 			{
 				answer: 'Caffè',
-				value: -5,
+				value: -10,
 			},
 			{
-				answer: 'Amaro',
+				answer: 'CocaCola',
 				value: 0,
 			},
 			{
-				answer: 'Grappa',
-				value: 5,
+				answer: 'Monster',
+				value: 10,
 			},
 		],
 	},
@@ -162,16 +175,16 @@ var questions = [
 		question: 'Che tipo di musica ascolti?',
 		answers: [
 			{
-				answer: 'Rock',
-				value: -5,
+				answer: 'Trap',
+				value: -10,
 			},
 			{
-				answer: 'Musica leggera',
+				answer: 'Rap',
 				value: 0,
 			},
 			{
-				answer: 'Jazz',
-				value: 5,
+				answer: 'Pop',
+				value: 10,
 			},
 		],
 	},
@@ -222,15 +235,15 @@ document.querySelector('form').addEventListener('submit', function (event) {
 //una volta che ho risposto alle domande prendo i punteggi dei singoli risultati e calcola la distanza euclidea fra il punteggio e i vari possibili risultati
 
 function distanza() {
-	let distanza_1 = piatti[0].valore - score;
-	let distanza_2 = piatti[1].valore - score;
-	let distanza_3 = piatti[2].valore - score;
+	let distanza_1 = Math.abs(parseInt(piatti[0].valore) - score);
+	let distanza_2 = Math.abs(parseInt(piatti[1].valore) - score);
+	let distanza_3 = Math.abs(parseInt(piatti[2].valore) - score);
 
 	let minimo = Math.min(distanza_1, distanza_2, distanza_3);
 
-	if (minimo == distanza_1) {
+	if (minimo === distanza_1) {
 		showResult(piatti[0]);
-	} else if (minimo == distanza_2) {
+	} else if (minimo === distanza_2) {
 		showResult(piatti[1]);
 	} else {
 		showResult(piatti[2]);
@@ -240,7 +253,9 @@ function distanza() {
 function showResult(piatto) {
 	document.querySelector('form').style.display = 'none';
 	document.querySelector('.nomePlate').innerText = piatto.nome;
+	document.querySelector('.underTitle').innerText = piatto.sottotitolo;
 	document.querySelector('.description').innerText = piatto.descrizione;
+	document.querySelector('#imgPlate').src = piatto.foto;
 }
 		</script>
 	</body>

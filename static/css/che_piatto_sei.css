@@ -1,29 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
-
-* {
+ * {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 }
 
 body {
-	background-color: #f1f1f1;
+	background-color: black;
 }
 
 .title {
 	text-align: center;
 	font-size: 4rem;
-	color: #1d88ab;
+	color: red;
 	font-family: 'PT Serif', 'Times New Roman', Times, serif;
 }
 
 .sottotitolo {
-	text-align: center;
+	text-align: left;
 	font-size: 3rem;
-	color: #187391;
-	margin-top: 1rem;
+	color: white;
+	margin-top: 5rem;
 	font-family: 'PT Serif', 'Times New Roman', Times, serif;
 }
 
@@ -57,7 +53,7 @@ form {
 
 label {
 	font-size: 1.5rem;
-	color: #145f78;
+	color: yellow;
 }
 
 input[type='radio'] {
@@ -71,12 +67,46 @@ input[type='radio'] {
 
 button {
 	height: 5rem;
-	width: 12rem;
+	width: 15rem;
 	border: 0;
 	border-radius: 0.5rem;
-	background-color: #1d88ab;
+	background-color: white;
 	margin-top: 1.4rem;
 	font-size: 2rem;
 	color: #ab401d;
 	font-family: 'Arvo', 'Times New Roman', Times, serif;
+}
+
+.container {
+	text-align: center;
+}
+
+#imgPlate {
+	max-width: 30%;
+	max-height: 30%;
+	margin-top: 40px;
+	border-radius: 5%;
+}
+
+.nomePlate {
+	font-size: 4rem;
+	color: #5c1dab;
+	font-family: 'Arvo', 'Times New Roman', Times, serif;
+	margin-top: 25px;
+}
+
+.underTitle {
+	font-size: 2rem;
+	color: #145f78;
+	font-family: 'Arvo', 'Times New Roman', Times, serif;
+	margin-top: 15px;
+}
+
+.description {
+	font-size: 1.5rem;
+	color: white;
+	font-family: 'Arvo', 'Times New Roman', Times, serif;
+	margin-top: 15px;
+	margin-left: 10vw;
+	margin-right: 10vw;
 }
