@@ -14,10 +14,9 @@
 	</head>
 	<body>
 		<header>
-			<h1 class="title">Qual'è il tuo piaitto guida?</h1>
+			<h1 class="title">Qual'è il tuo piatto guida?</h1>
 			<h3 class="sottotitolo">
 				Scopri con poche semplici domande il tuo piatto guida. 
-				Inzia il test!
 			</h3>
 
 			<h3 class="sottotitolo">
@@ -232,7 +231,6 @@ document.querySelector('form').addEventListener('submit', function (event) {
 	distanza();
 });
 
-//una volta che ho risposto alle domande prendo i punteggi dei singoli risultati e calcola la distanza euclidea fra il punteggio e i vari possibili risultati
 
 function distanza() {
 	let distanza_1 = Math.abs(parseInt(piatti[0].valore) - score);
